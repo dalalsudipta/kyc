@@ -19,7 +19,7 @@ app.use(express.json());
 app.get('/customers/:id', asyncHandler(async (req, res, next)=>{
     console.log(" inside index : req.params.id : " + req.params.id);
     let result=  await blockchainservice.readAsset(req.params.id);
-    
+     
     console.log(result); 
     res.send (result);
 }));
